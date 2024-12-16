@@ -9,8 +9,11 @@
     "web": "DARK_MODE=media expo start --web"
   },
   "dependencies": {
+    "@expo/ngrok": "^4.1.0",
+    "@gluestack-ui/avatar": "^0.1.18",
     "@gluestack-ui/button": "^1.0.8",
     "@gluestack-ui/icon": "^0.1.25",
+    "@gluestack-ui/image": "^0.1.11",
     "@gluestack-ui/input": "^0.1.32",
     "@gluestack-ui/nativewind-utils": "^1.0.26",
     "@gluestack-ui/overlay": "^0.1.16",

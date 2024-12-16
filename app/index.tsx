@@ -2,8 +2,9 @@ import { Box } from "@/components/ui/box";
 import { Button, ButtonText } from "@/components/ui/button";
 import { Input, InputField } from "@/components/ui/input";
 import { View, Text, StyleSheet } from "react-native";
+import { Link } from "expo-router";
 
-export default function (){
+export default function Home(){
     return (
         <View style={style.container}>
             <Text style={style.title}>Testing screen</Text>
@@ -18,7 +19,7 @@ export default function (){
                 isDisabled={false}
                 isInvalid={false}
                 isReadOnly={false}>
-                    <InputField type="text"/>
+                    <InputField type="text" autoComplete="email" keyboardType="email-address"/>
                 </Input>
 
                 <Text style={style.label}>Password</Text>
@@ -30,10 +31,14 @@ export default function (){
                 isDisabled={false}
                 isInvalid={false}
                 isReadOnly={false}>
-                    <InputField type="password"/>
+                    <InputField type="password" autoCapitalize="none"/>
                 </Input>
 
-                <Button style={style.button} variant="outline"><ButtonText>Login</ButtonText></Button>
+                <Button style={style.button} variant="outline">
+                    <Link href={"/home"}>
+                        <ButtonText>Login</ButtonText>
+                    </Link>
+                </Button>
             </Box>
         </View>
     )
@@ -58,7 +63,8 @@ const style = StyleSheet.create({
     },
     label: {
         fontSize: 20,
-        textAlign: 'center'
+        textAlign: 'center',
+        color: '#242424',
     },
     button: {
         width: 150,
