@@ -2,6 +2,7 @@ import { Avatar, AvatarFallbackText, AvatarImage } from "@/components/ui/avatar"
 import { Box } from "@/components/ui/box";
 import { Button, ButtonText } from "@/components/ui/button";
 import { View, Text, StyleSheet } from "react-native";
+import { Image } from '@/components/ui/image';
 
 export default function user(){
     return (
@@ -28,6 +29,12 @@ export default function user(){
                 <Button variant="outline" style={style.options}><ButtonText>History</ButtonText></Button>
                 <Button variant="outline" style={style.options}><ButtonText>Help</ButtonText></Button>
             </Box>
+            <Image source={{
+                    uri: 'https://1000marcas.net/wp-content/uploads/2022/01/Gravity-Falls-Logo.png',
+                    }} 
+                    alt="Gravity Falls"
+                    className="mb-6 h-[280px] w-[400px] rounded-md self-center"/>
+
         </View>
     )
 }
@@ -42,6 +49,7 @@ const style = StyleSheet.create({
         flexDirection: 'column',
         alignContent: "center",
         alignSelf: 'center',
+        marginTop: 10,
     },
     boxUser: {
         flex: 1,
@@ -52,7 +60,7 @@ const style = StyleSheet.create({
         marginBottom: 10,
         alignSelf: 'center',
         backgroundColor: '#efefef',
-        paddingTop: 30
+        paddingTop: 50
     },
     title: {
         color: '#242424',
@@ -61,7 +69,8 @@ const style = StyleSheet.create({
         textAlign: 'center'
     },
     avatar: {
-        alignSelf: 'center'
+        alignSelf: 'center',
+        borderWidth: 2
     },
     label: {
         fontSize: 20,
@@ -75,8 +84,11 @@ const style = StyleSheet.create({
         borderRadius: 20
     },
     options: {
-        width: '101%',
+        width: '80%',
         alignSelf: 'center',
         marginTop: 10,
+    },
+    logo: {
+
     }
 })
